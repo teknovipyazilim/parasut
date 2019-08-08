@@ -21,7 +21,7 @@ class Client
      *
      * @return string
      */
-    const API_URL = 'https://api.parasut.com/v1';
+    const API_URL = 'https://api.parasut.com/v4';
 
     /**
      * The oAuth token url.
@@ -49,23 +49,20 @@ class Client
      *
      * @var array
      */
-    protected 
-      = [
-        'account'  => Bundle\Account::class,
-        'category' => Bundle\Category::class,
-        'contact'  => Bundle\Contact::class,
-        'expense'  => Bundle\Expense::class,
-        'product'  => Bundle\Product::class,
-        'purchase' => Bundle\Purchase::class,
-        'sale'     => Bundle\Sale::class,
-    ];
+    protected $account  = Classes\Account::class;
+    protected $category = Classes\Category::class;
+    protected $contact  = Classes\Contact::class;
+    protected $expense  = Classes\Expense::class;
+    protected $product  = Classes\Product::class;
+    protected $purchase = Classes\Purchase::class;
+    protected $sale     = Classes\Sale::class;
 
     /**
      * An array of the types that have been resolved.
      *
      * @var array
      */
-    protected $resolved = [];
+    protected $resolved = array();
 
     /**
      * Constructor.
